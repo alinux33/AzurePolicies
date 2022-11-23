@@ -1,0 +1,108 @@
+{
+ "properties": {
+  "displayName": "INIT_Infrastructure_Tag_Assignment_all_RGs",
+  "policyType": "Custom",
+  "description": "Required tags on Resource Groups:\nCostCenter\nOwner\nAccount\nApplicationName\nEnvironment",
+  "metadata": {
+   "category": "Tags",
+   "version": "v1",
+   "createdBy": "efb2e3c7-9bbe-4014-8731-29a0ce3bbcff",
+   "createdOn": "2022-11-18T11:47:38.662286Z",
+   "updatedBy": "efb2e3c7-9bbe-4014-8731-29a0ce3bbcff",
+   "updatedOn": "2022-11-18T13:37:12.3136494Z"
+  },
+  "parameters": {
+   "Owner": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Owner",
+     "description": null
+    }
+   },
+   "CostCenter": {
+    "type": "string",
+    "metadata": {
+     "displayName": "CostCenter",
+     "description": null
+    }
+   },
+   "Account": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Account",
+     "description": null
+    }
+   },
+   "ApplicationName": {
+    "type": "string",
+    "metadata": {
+     "displayName": "ApplicationName",
+     "description": null
+    }
+   },
+   "Environment": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Environment",
+     "description": null
+    }
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Require a tag on resource groups_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96670d01-0a4d-4649-9c89-2d3abc0a5025",
+    "parameters": {
+     "tagName": {
+      "value": "[parameters('Owner')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Require a tag on resource groups_2",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96670d01-0a4d-4649-9c89-2d3abc0a5025",
+    "parameters": {
+     "tagName": {
+      "value": "[parameters('CostCenter')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Require a tag on resource groups_3",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96670d01-0a4d-4649-9c89-2d3abc0a5025",
+    "parameters": {
+     "tagName": {
+      "value": "[parameters('Account')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Require a tag on resource groups_4",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96670d01-0a4d-4649-9c89-2d3abc0a5025",
+    "parameters": {
+     "tagName": {
+      "value": "[parameters('ApplicationName')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Require a tag on resource groups_5",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96670d01-0a4d-4649-9c89-2d3abc0a5025",
+    "parameters": {
+     "tagName": {
+      "value": "[parameters('Environment')]"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/cd6282b3-8a1b-40f0-9992-593dec57dd10/providers/Microsoft.Authorization/policySetDefinitions/3fdb5f301c054d1e908c93c8",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "3fdb5f301c054d1e908c93c8"
+}
